@@ -1,0 +1,22 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "node ./build/client/index.js",
+    "server": "node ./build/server/index.js",
+    "dev_server": "npx tsc -p ./tsconfig.server.json && node ./build/server/index.js",
+    "dev_client": "npx tsc -p ./tsconfig.client.json && node ./build/client/index.js",
+    "build client":"npx tsc -p ./tsconfig.client.json && npx pkg -t windows ./build/client/index.js",
+    "build server":"npx tsc -p ./tsconfig.server.json && npx pkg -t linux ./build/server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.9.4",
+    "pkg": "^5.8.1"
+  }
+}
